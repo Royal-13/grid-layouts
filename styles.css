@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
+:root {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ecf2f8;
+}
+.gridContainer {
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1.5rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+.span2 {
+  grid-column: span 2;
+}
+.dflex {
+  display: flex;
+}
+.container {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  line-height: 1.2;
+  /* margin: 1rem; */
+  color: #ffffff;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem rgba(72, 85, 106, 0.25);
+}
+.container.quote {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+.bgPrimary {
+  background: #7541c8;
+}
+.bgSecondary {
+  background: #48556a;
+}
+.bgSecondary1 {
+  background: #19212e;
+}
+img {
+  border-radius: 50%;
+  width: 2.3rem;
+}
+.par {
+  padding: 0 1rem;
+  font-size: 0.85rem;
+}
+.position {
+  padding: 0 1rem;
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+.mainPosition {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: left;
+}
+.notMainPosition {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  opacity: 0.6;
+  line-height: 1.2;
+  text-align: left;
+}
+.fixHeight {
+  grid-row: span 2;
+}
+@media screen and (max-width: 75em) {
+  .gridContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .fixHeight {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+}
+
+@media screen and (max-width: 54em) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span2 {
+    grid-column: span 3;
+  }
+  .fixHeight {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+@media screen and (max-width: 38em) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span2 {
+    grid-column: span 3;
+  }
+  .fixHeight{
+    grid-row: 3;
+    grid-column: span 3;
+  }
+  .try{
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 33em) {
+    .gridContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 1fr);
+      }
+      .span2{
+        grid-column: span 3;
+      }
+      .smallSize{
+        grid-column: span 3;
+      }
+      .try{
+        grid-column: span 3;
+      }
+}
